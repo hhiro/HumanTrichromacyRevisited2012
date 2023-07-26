@@ -14,16 +14,21 @@ function path = cm_defaultPathforSaveSGEresults(condname)
 %
 % HH (c) Vista lab Oct 2012. 
 %
+
 %%
 if ~exist('condname','var') || isempty(condname)
     condname = '';
 end
 
+% This was set up to run on Linux biac and hard coded.  Changing.
+%
 % path = fullfile('~','PNASsgeRsults',condname);
+% path = fullfile('/','biac4','wandell','biac3','wandell7','hhiro', condname,'PNASsgeRsults'); % currently search seeds
 
-path = fullfile('/','biac4','wandell','biac3','wandell7','hhiro', condname,'PNASsgeRsults'); % currently search seeds
+path = fullfile(cmPublicRootPath,'local',condname,'PNASsgeResults');
 
-% if doesnt' exist
 if ~exist(path,'dir')
    mkdir(path) 
+end
+
 end

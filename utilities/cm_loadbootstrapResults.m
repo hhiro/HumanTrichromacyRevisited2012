@@ -25,23 +25,26 @@ function  btsStruct = cm_loadbootstrapResults(subinds, numMech, fovflag, corflag
 %       rsInds     ... randsample index
 %
 %
-% Example 
-%
-% subinds  = 1; % which subject
-% numMech  = 3; % number of mechanisms
-% fovflag  = 1; % fovea or periphery
-% corflag  = 0; % correct axis or not with pigment density
-% coneflag = 0; % only cone pigmetn or not
-%
-% ResampleRatio = 0.9; 
-% 
-% btsStruct = cm_loadbootstrapResults(subinds, numMech, fovflag, corflag, coneflag, ResampleRatio)
-%
-%
-% see also cm_mechfitBS.m
+% See Also 
+%    cm_mechfitBS.m
 % 
 % HH (c) Vista lab Oct 2012. 
 %
+
+% Examples: 
+%{
+ subinds  = 1; % which subject
+ numMech  = 3; % number of mechanisms
+ fovflag  = 1; % fovea or periphery
+ corflag  = 0; % correct axis or not with pigment density
+ coneflag = 0; % only cone pigmetn or not
+
+ ResampleRatio = 0.9; 
+ 
+ btsStruct = cm_loadbootstrapResults(subinds, numMech, fovflag, corflag, coneflag, ResampleRatio)
+%}
+
+
 %%
 
 if ~exist('condname','var') || isempty(condname)
