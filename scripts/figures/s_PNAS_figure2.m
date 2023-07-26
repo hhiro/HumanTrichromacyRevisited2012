@@ -29,6 +29,12 @@
 %
 % HH (c) Vista lab Oct 2012. 
 %
+
+%%
+
+% Run everything in the local directory that is ignored by git
+chdir(fullfile(cmPublicRootPath,'local'));
+
 %% figure 2A
 %  This takes a few minutes to compute.
 %
